@@ -1,0 +1,8 @@
+name: Hello                     # workflow名
+on: push                        # pushされたときに実行
+jobs:                           # ジョブの定義
+  hello:                        # ジョブID
+    runs-on: ubuntu-latest      # 実行環境 ランナー(実行環境)を指定
+    steps:                      # ステップの定義
+    - run: echo "Hello, world!" # シェルコマンドの実行
+    - uses: actions/checkout@v4 # アクションの呼び出し 
